@@ -42,6 +42,9 @@ AI-powered personal finance and expense intelligence SaaS platform.
 - Smart financial planning
 - Responsive interface
 
+- <img width="1852" height="853" alt="finsight" src="https://github.com/user-attachments/assets/a5664d37-14f2-40e7-89db-e52622d69756" />
+
+
 🔗 **Live:** https://finsight-ai-olive-pi.vercel.app/
 
 🔗 **GitHub:** https://github.com/prachi3761/finsight-AI
@@ -53,6 +56,9 @@ AI-powered personal finance and expense intelligence SaaS platform.
 An AI-powered application designed to analyze resumes and provide useful insights to help improve resume quality.
 
 🔗 **Live:** https://ai-resume-analyzer-mh5n-five.vercel.app/
+
+<img width="1894" height="831" alt="resume-analyzer" src="https://github.com/user-attachments/assets/a94f6be2-4a2e-4eda-bb38-3061a7c98ad0" />
+
 
 ---
 
@@ -67,6 +73,9 @@ A modern ride-booking web application with an interactive user experience.
 - Modern web application architecture
 
 🔗 **Live:** https://ride-go-final-jndy.vercel.app/
+
+<img width="1888" height="871" alt="ridego" src="https://github.com/user-attachments/assets/d168f2d2-a89b-40c7-9de6-cc17e5c3c562" />
+
 
 ---
 
@@ -87,6 +96,9 @@ A creative animation-focused website featuring modern layouts, animations, and i
 My personal developer portfolio showcasing my projects, skills, coding profiles, and development journey.
 
 🔗 **Live:** https://portfolio-nine-gilt-e281mybwgq.vercel.app
+
+<img width="1810" height="822" alt="portfolio" src="https://github.com/user-attachments/assets/d5db0432-7c24-4ac1-969f-beb70b5765d7" />
+
 
 ---
 
