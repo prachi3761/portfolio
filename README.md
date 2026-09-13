@@ -42,7 +42,8 @@ AI-powered personal finance and expense intelligence SaaS platform.
 - Smart financial planning
 - Responsive interface
 
-- <img width="1852" height="853" alt="finsight" src="https://github.com/user-attachments/assets/a5664d37-14f2-40e7-89db-e52622d69756" />
+
+<img width="1894" height="831" alt="finsight (2)" src="https://github.com/user-attachments/assets/03eb8862-e087-40f2-a114-0f5cbe3e6bd4" />
 
 
 🔗 **Live:** https://finsight-ai-olive-pi.vercel.app/
@@ -57,7 +58,7 @@ An AI-powered application designed to analyze resumes and provide useful insight
 
 🔗 **Live:** https://ai-resume-analyzer-mh5n-five.vercel.app/
 
-<img width="1894" height="831" alt="resume-analyzer" src="https://github.com/user-attachments/assets/a94f6be2-4a2e-4eda-bb38-3061a7c98ad0" />
+<img width="1852" height="853" alt="resume analyzer" src="https://github.com/user-attachments/assets/7f126a08-3d29-423c-910b-7aaf869d24c0" />
 
 
 ---
