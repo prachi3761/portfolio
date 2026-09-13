@@ -1,37 +1,99 @@
 import { useState } from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import "./App.css";
+import animatoryImage from "../project-images/animatory.png";
+import finsightImage from "../project-images/finsight.png";
+import portfolioImage from "../project-images/portfolio.png";
+import resumeAnalyzerImage from "../project-images/resume-analyzer.png";
+import ridegoImage from "../project-images/ridego.png";
 
 const projects = [
   {
     number: "01",
-    type: "FRONTEND / API",
-    title: "Weather App",
+    type: "FULL STACK / SAAS",
+    title: "FinSight AI",
+    image: finsightImage,
     description:
-      "A responsive weather application built with HTML, CSS and JavaScript that fetches live weather data through an API.",
-    tech: ["HTML5", "CSS3", "JavaScript", "Weather API"],
-    live: "#",
-    github: "#",
+      "A modern personal finance management platform for tracking income, expenses, accounts and spending insights through a responsive fintech dashboard.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Tailwind CSS",
+      "Recharts",
+    ],
+    live: "https://finsight-ai-olive-pi.vercel.app",
+    github: "https://github.com/prachi3761/finsight-AI",
   },
   {
     number: "02",
-    type: "REACT / AI",
-    title: "AI Portfolio",
+    type: "AI / FULL STACK",
+    title: "AI Resume Analyzer",
+    image: resumeAnalyzerImage,
     description:
-      "An interactive developer portfolio designed around Generative AI, modern frontend development and an AI-powered portfolio assistant.",
-    tech: ["React", "JavaScript", "CSS", "GenAI"],
-    live: "#",
-    github: "#",
+      "An AI-powered resume analysis platform designed to evaluate resumes, identify strengths and weaknesses, and provide actionable feedback for improving job applications.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Generative AI",
+    ],
+    live: "https://ai-resume-analyzer-mh5n-five.vercel.app/",
+    github: "https://github.com/prachi3761/ai-resume-analyzer",
   },
   {
     number: "03",
     type: "FULL STACK",
-    title: "Coming Soon",
+    title: "RideGo",
+    image: ridegoImage,
     description:
-      "A new full-stack project is currently in development. Details and live demo will be added soon.",
-    tech: ["MERN", "Node.js", "MongoDB"],
-    live: "#",
-    github: "#",
+      "A full-stack ride booking application focused on creating a smooth experience for users to explore, book and manage rides through a modern web interface.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JavaScript",
+    ],
+    live: "https://ride-go-final-jndy.vercel.app/",
+    github: "https://github.com/prachi3761/RideGo-Final",
+  },
+  {
+    number: "04",
+    type: "FRONTEND / ANIMATION",
+    title: "Animatory Website",
+    image: animatoryImage,
+    description:
+      "A visually engaging animated website focused on modern frontend design, smooth interactions and creative web animations.",
+    tech: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Animations",
+      "Responsive Design",
+    ],
+    live: "https://animatory-website.vercel.app",
+    github: "https://github.com/prachi3761/animatory-website",
+  },
+  {
+    number: "05",
+    type: "REACT / PORTFOLIO",
+    title: "Personal Portfolio",
+    image: portfolioImage,
+    description:
+      "A modern developer portfolio showcasing projects, technical skills, coding profiles and an interactive AI-powered portfolio experience.",
+    tech: [
+      "React",
+      "JavaScript",
+      "CSS3",
+      "React Router",
+      "Generative AI",
+    ],
+    live: "https://portfolio-nine-gilt-e281mybwgq.vercel.app",
+    github: "https://github.com/prachi3761/portfolio",
   },
 ];
 
@@ -51,7 +113,8 @@ const codingProfiles = [
   {
     icon: "NC",
     name: "NeetCode",
-    description: "DSA roadmap, coding patterns and interview preparation",
+    description:
+      "DSA roadmap, coding patterns and interview preparation",
     link: "https://neetcode.io/user/AlphaWhis779",
   },
   {
@@ -94,7 +157,10 @@ function Navbar() {
       <div className="nav-actions">
         <button className="icon-btn">☼</button>
 
-        <a href="mailto:yourmail@example.com" className="contact-btn">
+        <a
+          href="mailto:yourmail@example.com"
+          className="contact-btn"
+        >
           Let's Talk <span>↗</span>
         </a>
       </div>
@@ -213,13 +279,18 @@ function AIChat() {
 
                   <div className="bot-message response">
                     {index === 0 && (
-                      <span className="message-label">AI ASSISTANT</span>
+                      <span className="message-label">
+                        AI ASSISTANT
+                      </span>
                     )}
 
                     <p>{message.text}</p>
 
                     {index === 0 && (
-                      <Link to="/projects" className="view-projects">
+                      <Link
+                        to="/projects"
+                        className="view-projects"
+                      >
                         View projects →
                       </Link>
                     )}
@@ -246,20 +317,28 @@ function AIChat() {
 
         <div className="suggestions">
           <button
-            onClick={() => sendMessage("What are Prachi's strongest skills?")}
+            onClick={() =>
+              sendMessage("What are Prachi's strongest skills?")
+            }
           >
             What are her strongest skills?
           </button>
 
           <button
-            onClick={() => sendMessage("Tell me about Prachi's Weather App.")}
+            onClick={() =>
+              sendMessage(
+                "Tell me about Prachi's Weather App."
+              )
+            }
           >
             Tell me about her Weather App
           </button>
 
           <button
             onClick={() =>
-              sendMessage("Is Prachi suitable for a frontend developer role?")
+              sendMessage(
+                "Is Prachi suitable for a frontend developer role?"
+              )
             }
           >
             Is she suitable for a frontend role?
@@ -276,7 +355,10 @@ function AIChat() {
             disabled={loading}
           />
 
-          <button type="submit" disabled={loading || !input.trim()}>
+          <button
+            type="submit"
+            disabled={loading || !input.trim()}
+          >
             ↑
           </button>
         </form>
@@ -304,14 +386,17 @@ function Home() {
           <h1>
             Building digital
             <br />
-            <span className="gradient-text">experiences</span>
+            <span className="gradient-text">
+              experiences
+            </span>
             <br />
             that <em>matter.</em>
           </h1>
 
           <p className="hero-description">
-            Full Stack Developer focused on building modern, scalable and
-            intelligent web applications using <strong>MERN Stack</strong> and{" "}
+            Full Stack Developer focused on building modern,
+            scalable and intelligent web applications using{" "}
+            <strong>MERN Stack</strong> and{" "}
             <strong>Generative AI.</strong>
           </p>
 
@@ -327,7 +412,9 @@ function Home() {
           </div>
 
           <div className="tech-wrapper">
-            <span className="tech-label">CURRENTLY WORKING WITH</span>
+            <span className="tech-label">
+              CURRENTLY WORKING WITH
+            </span>
 
             <div className="tech-stack">
               <span>HTML5</span>
@@ -358,13 +445,15 @@ function Home() {
         <div className="about-grid">
           <div className="about-text">
             <p>
-              I'm a developer who enjoys turning ideas into useful, beautiful
-              and interactive digital experiences.
+              I'm a developer who enjoys turning ideas into
+              useful, beautiful and interactive digital
+              experiences.
             </p>
 
             <p>
-              My focus is on modern web development, clean user interfaces and
-              intelligent applications powered by Generative AI.
+              My focus is on modern web development, clean
+              user interfaces and intelligent applications
+              powered by Generative AI.
             </p>
 
             <div className="about-highlight">
@@ -381,24 +470,30 @@ function Home() {
             <div className="info-card">
               <span className="card-number">01</span>
               <h3>Creative</h3>
+
               <p>
-                Designing interfaces that are simple, modern and memorable.
+                Designing interfaces that are simple, modern
+                and memorable.
               </p>
             </div>
 
             <div className="info-card">
               <span className="card-number">02</span>
               <h3>Technical</h3>
+
               <p>
-                Building scalable applications using modern technologies.
+                Building scalable applications using modern
+                technologies.
               </p>
             </div>
 
             <div className="info-card">
               <span className="card-number">03</span>
               <h3>AI Driven</h3>
+
               <p>
-                Exploring Generative AI to create smarter user experiences.
+                Exploring Generative AI to create smarter user
+                experiences.
               </p>
             </div>
           </div>
@@ -424,7 +519,10 @@ function Home() {
             </div>
 
             <h3>Frontend Development</h3>
-            <p>Creating responsive and interactive user interfaces.</p>
+            <p>
+              Creating responsive and interactive user
+              interfaces.
+            </p>
 
             <div className="skill-tags">
               <span>HTML5</span>
@@ -441,7 +539,10 @@ function Home() {
             </div>
 
             <h3>Backend Development</h3>
-            <p>Building APIs and server-side applications with JavaScript.</p>
+            <p>
+              Building APIs and server-side applications with
+              JavaScript.
+            </p>
 
             <div className="skill-tags">
               <span>Node.js</span>
@@ -457,7 +558,10 @@ function Home() {
             </div>
 
             <h3>Database</h3>
-            <p>Working with databases to store and manage application data.</p>
+            <p>
+              Working with databases to store and manage
+              application data.
+            </p>
 
             <div className="skill-tags">
               <span>MongoDB</span>
@@ -472,9 +576,10 @@ function Home() {
             </div>
 
             <h3>Generative AI</h3>
+
             <p>
-              Building intelligent applications using LLMs and AI-powered
-              workflows.
+              Building intelligent applications using LLMs and
+              AI-powered workflows.
             </p>
 
             <div className="skill-tags">
@@ -531,8 +636,9 @@ function Projects() {
         </h1>
 
         <p>
-          A collection of projects built while exploring modern web
-          development, APIs, React and Generative AI.
+          A collection of projects built while exploring
+          modern web development, APIs, React and Generative
+          AI.
         </p>
       </section>
 
@@ -540,7 +646,9 @@ function Projects() {
         {projects.map((project) => (
           <article
             className={`project-card ${
-              project.number === "01" ? "featured-project" : ""
+              project.number === "01"
+                ? "featured-project"
+                : ""
             }`}
             key={project.number}
           >
@@ -550,26 +658,29 @@ function Projects() {
             </div>
 
             <div className="project-visual">
-              <div className="visual-window">
-                <div className="window-bar">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-
-                <div className="visual-content">
-                  <div className="visual-line long"></div>
-                  <div className="visual-line"></div>
-
-                  <div className="visual-boxes">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                </div>
+              <div
+                className="visual-window"
+                style={{
+                  overflow: "hidden",
+                  position: "relative",
+                }}
+              >
+                <img
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "block",
+                    objectFit: "cover",
+                    objectPosition: "top",
+                  }}
+                />
               </div>
 
-              <span className="visual-number">{project.number}</span>
+              <span className="visual-number">
+                {project.number}
+              </span>
             </div>
 
             <h2>{project.title}</h2>
@@ -628,8 +739,9 @@ function CodingProfiles() {
         </h1>
 
         <p>
-          Explore my coding journey, repositories, problem-solving practice
-          and technical work across different platforms.
+          Explore my coding journey, repositories,
+          problem-solving practice and technical work across
+          different platforms.
         </p>
       </section>
 
@@ -642,7 +754,9 @@ function CodingProfiles() {
             className="profile-card"
             key={profile.name}
           >
-            <div className="profile-icon">{profile.icon}</div>
+            <div className="profile-icon">
+              {profile.icon}
+            </div>
 
             <div className="profile-content">
               <span>CODING PLATFORM</span>
@@ -661,8 +775,8 @@ function CodingProfiles() {
         <span>✦</span>
 
         <p>
-          More profiles and achievements will be added as the coding journey
-          grows.
+          More profiles and achievements will be added as the
+          coding journey grows.
         </p>
       </div>
 
@@ -682,7 +796,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/coding-profiles" element={<CodingProfiles />} />
+          <Route
+            path="/coding-profiles"
+            element={<CodingProfiles />}
+          />
         </Routes>
 
         <div className="background-number">01</div>
